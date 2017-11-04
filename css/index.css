@@ -1,3 +1,152 @@
+/*1111111111111111111111111111111111111111111111111111111111111111*/
+@keyframes view1-saozi {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+@keyframes view1-left {
+  to {
+    transform: translate(0);
+  }
+}
+@keyframes view1-right {
+  to {
+    transform: translate(0);
+  }
+}
+@keyframes view1-star {
+  from {
+    opacity: 0 ;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes view1-mouth {
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes view1-tongue {
+  25% {
+    transform: rotate(50deg);
+  }
+  75% {
+    transform: rotate(-40deg);
+  }
+}
+@keyframes view1-water {
+  25% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+}
+/*222222222222222222222222222222222222222*/
+@keyframes view2-aixiao {
+  20% {
+    transform: translate(150%, -100%);
+  }
+  40% {
+    transform: translate(-100%, -100%);
+  }
+  60% {
+    transform: translate(0, -100%);
+  }
+  80% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes view2-zhidao {
+  to {
+    transform: translate(0);
+  }
+}
+/*3333333333333333333333333*/
+@keyframes view3-dashi {
+  20% {
+    transform: scaleX(0.9) translate(15%, -950%);
+  }
+  50% {
+    transform: scaleX(0.9) translate(15%, -950%);
+  }
+  80% {
+    transform: scaleX(1.2) translate(15%, 100%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes view3-lan {
+  20% {
+    transform: scale(1.2) translate(-100%, 250%);
+  }
+  80% {
+    transform: scale(1.5) translate(-100%, 250%);
+  }
+  100% {
+    transform: scale(1) translate(0);
+  }
+}
+@keyframes view3-laoma {
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes view3-keyi {
+  10% {
+    transform: scale(1.3) translateX(130%);
+  }
+  11% {
+    transform: translateY(900%);
+  }
+  60% {
+    transform: translateY(900%);
+  }
+  80% {
+    transform: scale(1.5) translate(-100%, 250%);
+  }
+  100% {
+    transform: scale(1.5) translate(-100%, 250%);
+  }
+}
+@keyframes view3-mawo {
+  30% {
+    transform: scale(1.2) translate(-50%, 150%);
+  }
+  70% {
+    transform: scale(1.5) translate(0, 250%);
+  }
+  100% {
+    transform: scale(1) translate(0);
+  }
+}
+@keyframes view3-woman {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes view3-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(60deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -64,6 +213,28 @@ html,
 #wrap #viewList .view.view1 {
   background-color: #1d2e80;
 }
+#wrap #viewList .view.view1.active .view1-1 {
+  visibility: visible !important;
+  animation: view1-saozi 1s infinite;
+}
+#wrap #viewList .view.view1.active .view1-2 {
+  animation: view1-left 1s 0.3s forwards;
+}
+#wrap #viewList .view.view1.active .view1-3 {
+  animation: view1-right 1s 0.6s forwards;
+}
+#wrap #viewList .view.view1.active .view1-4 {
+  animation: view1-star 1.5s 2s infinite;
+}
+#wrap #viewList .view.view1.active .view1-5 {
+  animation: view1-tongue 4s 2s infinite;
+}
+#wrap #viewList .view.view1.active .view1-6 {
+  animation: view1-water 4s 2s infinite;
+}
+#wrap #viewList .view.view1.active .mouth {
+  animation: view1-mouth 1s 1.2s forwards;
+}
 #wrap #viewList .view.view1 .upper {
   margin-top: 5%;
   width: 100%;
@@ -96,15 +267,17 @@ html,
   position: absolute;
   width: 20%;
   right: 0;
-  top: -15%;
+  top: -18%;
 }
 #wrap #viewList .view.view1 .content > img:nth-of-type(2) {
   width: 48%;
   height: 90%;
+  transform: translateX(-150%);
 }
 #wrap #viewList .view.view1 .content > img:nth-of-type(3) {
   width: 50%;
   height: 90%;
+  transform: translateX(150%);
 }
 #wrap #viewList .view.view1 .content > img:nth-of-type(4) {
   width: 90%;
@@ -115,6 +288,7 @@ html,
 }
 #wrap #viewList .view.view1 .content .mouth {
   position: absolute;
+  transform: scale(0);
   top: 2%;
   left: 15%;
   width: 65%;
@@ -125,6 +299,7 @@ html,
 #wrap #viewList .view.view1 .content .mouth > img {
   width: 80%;
   margin-left: 22%;
+  opacity: 0;
 }
 #wrap #viewList .view.view1 .content .mouth .mouthInner {
   text-align: center;
@@ -133,7 +308,6 @@ html,
   margin-top: -10%;
   width: 60%;
   position: relative;
-  z-index: 1;
 }
 #wrap #viewList .view.view1 .content .mouth .mouthInner > img:nth-of-type(2) {
   position: absolute;
@@ -143,26 +317,42 @@ html,
 }
 #wrap #viewList .view.view1 .content .mouth .mouthInner .tongue {
   position: absolute;
-  z-index: 2;
   top: 40%;
   left: 25%;
   width: 50% ;
   height: 100%;
 }
-#wrap #viewList .view.view1 .content .mouth .mouthInner .tongue > img:nth-of-type(1) {
+#wrap #viewList .view.view1 .content .mouth .mouthInner .tongue > img:nth-of-type(2) {
   position: absolute;
-  top: 20%;
+  top: 7%;
   left: -20%;
   width: 150%;
 }
-#wrap #viewList .view.view1 .content .mouth .mouthInner .tongue > img:nth-of-type(2) {
+#wrap #viewList .view.view1 .content .mouth .mouthInner .tongue > img:nth-of-type(1) {
   position: absolute;
-  top: 20%;
+  top: 7%;
   right: 5%;
   width: 80%;
+  transform-origin: top;
 }
 #wrap #viewList .view.view2 {
   background-color: #3a227c;
+}
+#wrap #viewList .view.view2.active .aixiao {
+  animation: view2-aixiao 1.5s forwards;
+}
+#wrap #viewList .view.view2.active .view2-1,
+#wrap #viewList .view.view2.active .view2-4,
+#wrap #viewList .view.view2.active .zhihui {
+  animation: view2-zhidao 0.8s 1.6s forwards;
+}
+#wrap #viewList .view.view2.active .view2-3 {
+  transform: scale(1);
+  animation: view1-saozi 1.5s 3.2s infinite;
+}
+#wrap #viewList .view.view2.active .zhang,
+#wrap #viewList .view.view2.active .yuweiwen {
+  animation: view2-zhidao 0.8s 2.5s forwards;
 }
 #wrap #viewList .view.view2 .upper,
 #wrap #viewList .view.view2 .bottom {
@@ -182,18 +372,27 @@ html,
   position: absolute;
   width: 20%;
   left: 41%;
+  transform: translate(-375%, -100%);
+}
+#wrap #viewList .view.view2 .upper .view2-1 {
+  transform: translateX(-150%);
 }
 #wrap #viewList .view.view2 .bottom {
   margin-top: 5%;
 }
+#wrap #viewList .view.view2 .bottom .view2-4 {
+  transform: translateY(250%);
+}
 #wrap #viewList .view.view2 .bottom .zhihui {
   width: 55%;
+  transform: translateY(250%);
 }
 #wrap #viewList .view.view2 .bottom .zhang {
   position: absolute;
   bottom: 30%;
   left: 25%;
   width: 10%;
+  transform: translateX(-500%);
 }
 #wrap #viewList .view.view2 .bottom .yuweiwen {
   position: absolute;
@@ -201,6 +400,7 @@ html,
   height: 50px;
   bottom: -10%;
   right: 3%;
+  transform: translateX(150%);
 }
 #wrap #viewList .view.view2 .bottom .yuweiwen .line {
   position: absolute;
@@ -231,9 +431,33 @@ html,
   margin-left: -5%;
   margin-top: -35%;
   width: 110%;
+  transform: scale(0);
 }
 #wrap #viewList .view.view3 {
+  z-index: 2;
   background-color: #0277af;
+}
+#wrap #viewList .view.view3.active .bottom > .end {
+  animation: view3-dashi 3s forwards;
+}
+#wrap #viewList .view.view3.active .view3-2 {
+  animation: view3-mawo 1.5s 1.5s forwards;
+}
+#wrap #viewList .view.view3.active .view3-3 {
+  animation: view3-lan 1.5s 0.5s forwards;
+}
+#wrap #viewList .view.view3.active .view3-5,
+#wrap #viewList .view.view3.active .view3-6 {
+  animation: view3-laoma 1s 0.8s forwards;
+}
+#wrap #viewList .view.view3.active .view3-13 {
+  animation: view1-left 1s 0.8s forwards;
+}
+#wrap #viewList .view.view3.active .view3-12 {
+  animation: view1-left 0.5s 2.5s forwards;
+}
+#wrap #viewList .view.view3.active .middle img {
+  animation: view3-woman 1s 2.5s forwards;
 }
 #wrap #viewList .view.view3 .upper {
   position: relative;
@@ -245,9 +469,11 @@ html,
 }
 #wrap #viewList .view.view3 .upper .view3-2 {
   width: 30%;
+  transform: scale(1.5) translate(-152%, 150%);
 }
 #wrap #viewList .view.view3 .upper .view3-3 {
   width: 20%;
+  transform: scale(0) translate(-100%, 250%);
 }
 #wrap #viewList .view.view3 .upper .view3-4 {
   width: 100%;
@@ -257,12 +483,14 @@ html,
   bottom: 20%;
   width: 15%;
   left: 10%;
+  transform: translateY(900%);
 }
 #wrap #viewList .view.view3 .upper .view3-6 {
   position: absolute;
   bottom: 20%;
   left: 25%;
   width: 15%;
+  transform: translateY(950%);
 }
 #wrap #viewList .view.view3 .middle {
   position: relative;
@@ -270,6 +498,9 @@ html,
   height: 50%;
   background: url("../img/view-3/bg1.jpg") no-repeat;
   background-size: 100% 100%;
+}
+#wrap #viewList .view.view3 .middle img {
+  opacity: 0;
 }
 #wrap #viewList .view.view3 .middle .view3-7 {
   position: absolute;
@@ -314,14 +545,17 @@ html,
 }
 #wrap #viewList .view.view3 .bottom {
   position: relative;
+  top: 5%;
   width: 100%;
   height: 23%;
 }
 #wrap #viewList .view.view3 .bottom .view3-12 {
   width: 100%;
+  transform: translateX(150%);
 }
 #wrap #viewList .view.view3 .bottom .view3-13 {
   width: 35%;
+  transform: scale(1.3) translateX(130%);
 }
 #wrap #viewList .view.view3 .bottom .end {
   height: 40%;
@@ -329,6 +563,7 @@ html,
   position: absolute;
   bottom: 20%;
   right: 0;
+  transform: scaleX(0.9) translate(315%, -950%);
 }
 #wrap #viewList .view.view3 .bottom .end img {
   width: 17%;
@@ -668,12 +903,11 @@ html,
 }
 #wrap #viewList .view.view8 .content .bottom .main .view8-10 {
   width: 150%;
-  margin-left: -22%;
+  margin-left: -26%;
   margin-top: 8%;
 }
 #wrap #viewList .view.view9 {
   background-color: #023671;
-  z-index: 2;
 }
 #wrap #viewList .view.view9 .content {
   width: 100%;

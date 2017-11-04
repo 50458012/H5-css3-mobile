@@ -1,3 +1,4 @@
+@import "./animation.less";
 *{
     margin: 0;
     padding: 0;
@@ -58,6 +59,31 @@ body,html,#wrap{
             left: 0;
             &.view1{
                 background-color: #1d2e80;
+                &.active{
+                    .view1-1{
+                        visibility: visible !important;
+                        animation: view1-saozi 1s infinite ;
+                    }
+                    .view1-2{
+                        animation: view1-left 1s .3s forwards ;
+                    }
+                    .view1-3{
+                        animation: view1-right 1s .6s forwards ;
+                    }
+                    .view1-4{
+                        //opacity: 1 !important;
+                        animation: view1-star 1.5s 2s infinite ;
+                    }
+                    .view1-5{
+                        animation: view1-tongue 4s 2s infinite ;
+                    }
+                    .view1-6{
+                        animation: view1-water 4s 2s infinite ;
+                    }
+                    .mouth{
+                        animation: view1-mouth 1s 1.2s forwards ;
+                    }
+                }
                 .upper{
                     margin-top: 5%;
                     width: 100%;
@@ -89,15 +115,17 @@ body,html,#wrap{
                         position: absolute;
                         width: 20%;
                         right: 0;
-                        top:-15%;
+                        top:-18%;
                     }
                     &>img:nth-of-type(2){
                         width: 48%;
                         height: 90%;
+                        transform: translateX(-150%);
                     }
                     &>img:nth-of-type(3){
                         width: 50%;
                         height: 90%;
+                        transform: translateX(150%);
                     }
                     &>img:nth-of-type(4){
                         width: 90%;
@@ -105,10 +133,10 @@ body,html,#wrap{
                         z-index: -1;
                         bottom: 5%;
                         left: 5%;
-                        //margin: -20% 0 0 -5%;
                     }
                     .mouth{
                         position: absolute;
+                        transform: scale(0);
                         top: 2%;
                         left: 15%;
                         width: 65%;
@@ -118,6 +146,7 @@ body,html,#wrap{
                         &>img{
                             width: 80%;
                             margin-left: 22%;
+                            opacity: 0;
                         }
                         .mouthInner{
                             text-align: center;
@@ -125,7 +154,6 @@ body,html,#wrap{
                                 margin-top: -10%;
                                 width: 60%;
                                 position: relative;
-                                z-index: 1;
                             }
                             &>img:nth-of-type(2){
                                 position: absolute;
@@ -136,22 +164,22 @@ body,html,#wrap{
                             }
                             .tongue{
                                 position: absolute;
-                                z-index: 2;
                                 top: 40%;
                                 left: 25%;
                                 width: 50% ;
                                 height: 100%;
-                                &>img:nth-of-type(1){
+                                &>img:nth-of-type(2){
                                     position: absolute;
-                                    top: 20%;
+                                    top: 7%;
                                     left:-20%;
                                     width: 150%;
                                 }
-                                &>img:nth-of-type(2){
+                                &>img:nth-of-type(1){
                                     position: absolute;
-                                    top: 20%;
+                                    top: 7%;
                                     right: 5%;
                                     width: 80%;
+                                    transform-origin: top;
                                 }
                             }
                         }
@@ -160,6 +188,21 @@ body,html,#wrap{
             }
             &.view2{
                 background-color: #3a227c;
+                &.active{
+                    .aixiao{
+                        animation: view2-aixiao 1.5s forwards;
+                    }
+                    .view2-1, .view2-4,.zhihui{
+                        animation: view2-zhidao .8s 1.6s forwards;
+                    }
+                    .view2-3{
+                        transform: scale(1);
+                        animation: view1-saozi 1.5s 3.2s infinite;
+                    }
+                    .zhang,.yuweiwen{
+                        animation: view2-zhidao .8s 2.5s forwards;
+                    }
+                }
                 .upper,.bottom {
                     position: relative;
                     width: 100%;
@@ -175,18 +218,27 @@ body,html,#wrap{
                         position: absolute;
                         width: 20%;
                         left: 41%;
+                        transform: translate(-375%,-100%);
+                    }
+                    .view2-1{
+                        transform: translateX(-150%);
                     }
                 }
                 .bottom{
                     margin-top: 5%;
+                    .view2-4{
+                        transform: translateY(250%);
+                    }
                     .zhihui{
                         width: 55%;
+                        transform: translateY(250%);
                     }
                     .zhang {
                         position: absolute;
                         bottom: 30%;
                         left: 25%;
                         width: 10%;
+                        transform: translateX(-500%);
                     }
                     .yuweiwen {
                         position: absolute;
@@ -194,6 +246,7 @@ body,html,#wrap{
                         height: 50px;
                         bottom: -10%;
                         right: 3%;
+                        transform: translateX(150%);
                         .line{
                             position: absolute;
                             width: 100%;
@@ -223,24 +276,52 @@ body,html,#wrap{
                             margin-left: -5%;
                             margin-top: -35%;
                             width: 110%;
+                            transform: scale(0);
                         }
                     }
                 }
             }
             &.view3{
+                z-index: 2;
                 background-color: #0277af;
+                &.active{
+                    .bottom>.end{
+                        animation: view3-dashi 3s forwards ;
+                    }
+                    .view3-2{
+                        animation: view3-mawo 1.5s 1.5s forwards ;
+                    }
+                    .view3-3{
+                        animation: view3-lan 1.5s .5s forwards ;
+                    }
+                     .view3-5,.view3-6{
+                        animation: view3-laoma 1s .8s forwards ;
+                    }
+                    .view3-13{
+                        animation: view1-left 1s .8s forwards ;
+                    }
+                    .view3-12{
+                        animation: view1-left .5s 2.5s forwards ;
+                    }
+                    .middle img {
+                        animation: view3-woman 1s 2.5s forwards;
+                    }
+                }
                 .upper{
                     position: relative;
                     width: 100%;
                     height: 22%;
                     .view3-1{
                         width: 45%;
+
                     }
                     .view3-2{
                         width: 30%;
+                        transform: scale(1.5) translate(-152%,150%);
                     }
                     .view3-3{
                         width: 20%;
+                        transform: scale(0) translate(-100%,250%);
                     }
                     .view3-4{
                         width: 100%;
@@ -250,12 +331,14 @@ body,html,#wrap{
                         bottom: 20%;
                         width: 15%;
                         left: 10%;
+                        transform: translateY(900%);
                     }
                     .view3-6{
                         position: absolute;
                         bottom: 20%;
                         left: 25%;
                         width: 15%;
+                        transform: translateY(950%);
                     }
                 }
                 .middle{
@@ -264,6 +347,9 @@ body,html,#wrap{
                     height: 50%;
                     background: url("../img/view-3/bg1.jpg") no-repeat;
                     background-size: 100% 100%;
+                    img{
+                        opacity: 0;
+                    }
                     .view3-7{
                         position: absolute;
                         top:10%;
@@ -308,13 +394,16 @@ body,html,#wrap{
                 }
                 .bottom{
                     position: relative;
+                    top:5%;
                     width: 100%;
                     height: 23%;
                     .view3-12{
                         width: 100%;
+                        transform: translateX(150%);
                     }
                     .view3-13{
                         width: 35%;
+                        transform: scale(1.3)translateX(130%);
                     }
                     .end{
                         height: 40%;
@@ -322,6 +411,7 @@ body,html,#wrap{
                         position: absolute;
                         bottom: 20%;
                         right: 0;
+                        transform: scaleX(0.9) translate(315%,-950%);
                         img{
                             width: 17%;
                         }
@@ -661,7 +751,7 @@ body,html,#wrap{
                             background-size: 100% 100%;
                             .view8-10{
                                 width: 150%;
-                                margin-left: -22%;
+                                margin-left: -26%;
                                 margin-top: 8%;
                             }
                         }
@@ -670,7 +760,6 @@ body,html,#wrap{
             }
             &.view9{
                 background-color: #023671;
-                z-index: 2;
                 .content{
                     width: 100%;
                     height: 100%;
