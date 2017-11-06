@@ -282,7 +282,6 @@ body,html,#wrap{
                 }
             }
             &.view3{
-                z-index: 2;
                 background-color: #0277af;
                 &.active{
                     .bottom>.end{
@@ -422,6 +421,29 @@ body,html,#wrap{
                 background: #f7194f url("../img/view-4/bg1.jpg") no-repeat;
                 background-size: 70% 70%;
                 background-position: 60% 40%;
+                &.active{
+                    .wanghong{
+                        animation: view4-wanghong 2s forwards ;
+                    }
+                    .kewan{
+                        animation:  view1-left 1s 1s cubic-bezier(.04,1.83,.71,1.82) forwards ;
+                    }
+                    .view4-9, .view4-12{
+                        animation:  view1-left .5s 1.5s forwards ;
+                    }
+                    .view4-10,.view4-7{
+                        animation:  view1-left 1s 2s forwards ;
+                    }
+                    .view4-11{
+                        animation:  view1-star 1s 2.5s forwards ;
+                    }
+                    .view4-13{
+                        animation:  view1-left 1s 3s forwards ;
+                    }
+                    .view4-8{
+                        animation:  view1-mouth 1s 3s infinite ;
+                    }
+                }
                 .top{
                     position: relative;
                     width: 100%;
@@ -434,8 +456,10 @@ body,html,#wrap{
                         top: 47%;
                          right: -5%;
                          width: 12%;
+                         transform: translateY(-500%);
                     }
                     .wanghong{
+                        transform: translateY(-300%) scaleX(2);
                         top: 15%;
                         right: 24%;
                         width: 40%;
@@ -445,13 +469,14 @@ body,html,#wrap{
                         }
                     }
                     .kewan{
+                        transform: translateX(-250%);
                         position: absolute;
                         width: 30%;
                         top: 80%;
                         left: 30%;
                         img{
                             vertical-align: middle;
-                            width: 47%;
+                            width: 40%;
                         }
                     }
                 }
@@ -468,41 +493,72 @@ body,html,#wrap{
                     .view4-8{
                         margin-left: 10%;
                         width: 80%;
+                        transform: scaleY(0);
                     }
                     .view4-9{
                         position: absolute;
                         top: 9%;
                         left: 22%;
                         width: 35%;
+                        transform: translateY(200%);
                     }
                     .view4-10{
                         position: absolute;
                         top: -70%;
                         left: 62%;
                         width: 35%;
+                        transform: translateY(-200%);
                     }
                     .view4-11{
                         position: absolute;
                         top: -50%;
                         left: 68%;
                         width: 33%;
+                        opacity: 0;
                     }
                     .view4-12{
                         position: absolute;
                         top:-12%;
                         left: 30%;
                         width: 13%;
+                        transform: translateY(850%);
                     }
                     .view4-13{
                         position: absolute;
                         top:15%;
                         right: -7%;
                         width: 13%;
+                        transform: translateX(150%);
                     }
                 }
             }
             &.view5{
                 background-color: #483b94;
+                &.active{
+                    .smt{
+                        animation: view1-star .5s infinite ;
+                    }
+                    .view5-6{
+                        animation: view5-yanjiu 5s infinite ;
+                    }
+                    .view5-8{
+                        animation: view1-water 1s infinite ;
+                    }
+                    .bottom{
+                        .view5-9{
+                            animation: view5-smt 1s infinite ;
+                        }
+                        .view5-10{
+                            animation: view5-smt 1s .2s infinite ;
+                        }
+                        .view5-11{
+                            animation: view5-smt 1s .4s infinite  ;
+                        }
+                        .view5-12{
+                            animation: view5-smt 1s .6s infinite ;
+                        }
+                    }
+                }
                 .upper{
                     position: relative;
                     margin-top: 5%;
@@ -521,6 +577,7 @@ body,html,#wrap{
                     .smt{
                        float: right;
                         width: 50%;
+                        opacity: 0;
                         img{
                             width: 26%;
                             vertical-align: middle;
@@ -579,6 +636,7 @@ body,html,#wrap{
                 }
             }
             &.view6{
+                z-index: 2;
                 background-color: #fec633;
                 .top{
                     position: relative;
