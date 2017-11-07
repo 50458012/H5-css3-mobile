@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="632a8dbe-be11-4962-81fd-bcf8ef81da4a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/11.11.html" afterPath="$PROJECT_DIR$/11.11.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/animation.less" afterPath="$PROJECT_DIR$/css/animation.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/index.less" afterPath="$PROJECT_DIR$/css/index.less" />
-    </list>
+    <list default="true" id="632a8dbe-be11-4962-81fd-bcf8ef81da4a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -23,7 +17,7 @@
       <file leaf-file-name="11.11.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/11.11.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
+            <state relative-caret-position="-140">
               <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="n#li#0;n#ul#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -155,7 +149,7 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../VUE/e-meng" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -210,12 +204,12 @@
       <workItem from="1509718167234" duration="14873000" />
       <workItem from="1509755057100" duration="112000" />
       <workItem from="1509895055208" duration="6485000" />
-      <workItem from="1509927637488" duration="303000" />
+      <workItem from="1509927637488" duration="587000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79114000" />
+    <option name="totallyTimeSpent" value="79398000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="530" y="24" width="1691" height="1035" extended-state="0" />
@@ -614,7 +608,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/11.11.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
+        <state relative-caret-position="-140">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="n#li#0;n#ul#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
